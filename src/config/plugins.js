@@ -10,5 +10,15 @@ module.exports = {
   metagen: function (eleventyConfig) {
     let plugin = require('eleventy-plugin-metagen');
     eleventyConfig.addPlugin(plugin);
+  },
+
+  shopify: function (eleventyConfig) {
+    let plugin = require('eleventy-plugin-shopify');
+    eleventyConfig.addPlugin(plugin, {
+      url: "",
+      key: "",
+      version: "",
+      // optional: shopQuery, productsQuery, collectionsQuery, pagesQuery, articlesQuery
+    });
   }
 }
