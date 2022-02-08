@@ -14,6 +14,13 @@ title: Up to zero! 🪐
     <li>Change colors and styles: <code>src/assets/styles/</code></li>
   </ul>
 
+  <h2>Products</h2>
+  <ul>
+  {% for product in shopify.products %}
+  <li><a href="/{{ product.handle }}/">{{ product.title }}</a></li>
+  {% endfor %}
+  </ul>
+
   <hr>
 
   {% image "https://source.unsplash.com/1024x768/?beagle", "Random image of a beagle", "100%" %}
